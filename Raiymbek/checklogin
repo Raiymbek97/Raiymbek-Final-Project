@@ -1,0 +1,11 @@
+<?php 
+	include "connection.php";
+	$query = "SELECT name FROM `users`";
+	$result=$con->query($query);
+	$row=$result->fetch_array();
+	if($_GET['login']!=$row['name'] && $_GET['login']!=''){
+		echo "#99ffb4";
+	 	}else if($_GET['login']===$row['name'] || $$_GET['login']===''){
+	 		echo "#ffcccc";
+	 	}
+?>
